@@ -16,8 +16,12 @@ float soma(){
     return resultado;
 }
 
-void subtracao(){
-
+float subtracao(){
+    float valor1, valor2, resultado;
+    valor1 = lerValor();
+    valor2 = lerValor();
+    resultado = valor1 - valor2;
+    return resultado;
 }
 void multiplicacao(){}
 
@@ -46,7 +50,10 @@ void menu(){
             menu();
         break;
         case 2:
-            subtracao();
+            resposta = subtracao();
+            printf("\nResultado: %2f\n\n", resposta);
+            //system("clear");
+            menu();
         break;
         case 3:
             multiplicacao();
