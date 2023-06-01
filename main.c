@@ -31,7 +31,13 @@ float multiplicacao(){
     return resultado;
 }
 
-void divisao(){}
+float divisao(){
+    float valor1, valor2, resultado;
+    valor1 = lerValor();
+    valor2 = lerValor();
+    resultado = valor1 / valor2;
+    return resultado;
+}
 
 void menu(){
     int escolha;
@@ -68,7 +74,10 @@ void menu(){
             menu();
         break;
         case 4:
-            divisao();
+            resposta = divisao();
+            printf("\nResultado: %2f\n\n", resposta);
+            //system("clear");
+            menu();
         break;
         case 5:
             system("exit");
