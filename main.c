@@ -1,9 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+float lerValor(){
+    float valor;
+    printf("\nDigite o valor: ");
+    scanf("%f", &valor);
+    return valor;
+}
+
+float soma(){
+    float valor1, valor2, resultado;
+    valor1 = lerValor();
+    valor2 = lerValor();
+    resultado = valor1 + valor2;
+    return resultado;
+}
+
+void subtracao(){
+
+}
+void multiplicacao(){}
+
+void divisao(){}
 
 void menu(){
     int escolha;
+    float resposta;
 
     printf("Calculadora em c\n\n");
 
@@ -14,11 +36,14 @@ void menu(){
     printf("4 - Divisao\n");
     printf("5 - Sair\n");
     printf("Escolha a operacao: ");
-    scanf("%d", $escolha);
+    scanf("%d", &escolha);
 
     switch(escolha){
         case 1:
-            soma();
+            resposta = soma();
+            printf("\nResultado: %2f\n\n", resposta);
+            //system("clear");
+            menu();
         break;
         case 2:
             subtracao();
@@ -36,8 +61,8 @@ void menu(){
 
         default:
             printf("Resposta invalida");
-            system("pause");
-            system("cls");
+            getchar();
+            system("clear");
             menu();
             break;
     }
@@ -45,6 +70,7 @@ void menu(){
 }
 
 int main(){
-
+    menu();
+    system("pause");
     return 0;
 }
