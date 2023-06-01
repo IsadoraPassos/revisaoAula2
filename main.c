@@ -39,6 +39,12 @@ float divisao(){
     return resultado;
 }
 
+void pausar(){
+    int gambiarra;
+    printf("Digite qualquer numero para seguir: ");
+    scanf("%d", &gambiarra);
+}
+
 void menu(){
     int escolha;
     float resposta;
@@ -58,25 +64,29 @@ void menu(){
         case 1:
             resposta = soma();
             printf("\nResultado: %2f\n\n", resposta);
-            //system("clear");
+            pausar();
+            system("clear");
             menu();
         break;
         case 2:
             resposta = subtracao();
             printf("\nResultado: %2f\n\n", resposta);
-            //system("clear");
+            pausar();
+            system("clear");
             menu();
         break;
         case 3:
             resposta = multiplicacao();
             printf("\nResultado: %2f\n\n", resposta);
-            //system("clear");
+            pausar();
+            system("clear");
             menu();
         break;
         case 4:
             resposta = divisao();
             printf("\nResultado: %2f\n\n", resposta);
-            //system("clear");
+            pausar();
+            system("clear");
             menu();
         break;
         case 5:
@@ -85,7 +95,7 @@ void menu(){
         break;
 
         default:
-            printf("Resposta invalida");
+            printf("Resposta invalida\n");
             getchar();
             system("clear");
             menu();
@@ -96,6 +106,5 @@ void menu(){
 
 int main(){
     menu();
-    system("pause");
     return 0;
 }
